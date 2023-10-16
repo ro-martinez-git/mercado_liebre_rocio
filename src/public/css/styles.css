@@ -42,9 +42,10 @@ header div.logo {
   padding: 10px;
 }
 
-header .form {
+header div.form {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   padding: 2px;
   font-size: 11px;
 }
@@ -64,19 +65,25 @@ header ul li a {
   color: #000;
 }
 
-header .form .input {
+header div.form .input {
   background-color: #fff;
   border: 1px solid #000;
-  outline: none;
   color: #666;
   padding: 2px;
 }
 
-header .form .submit {
-  background-color: #fff;
-  border: 1px solid #000;
+input.form{
+  border-radius:5px;
+  border: none;
+  outline:none;
+  padding: 8px;
+}
+
+header div.top-header div.form span.submit i{
   color: #666;
-  width: 10%;
+  border: none;
+  cursor: pointer;
+  font-size:12px
 }
 
 header div.top-header p {
@@ -194,12 +201,11 @@ main section article i {
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
-  padding-block-end: 15px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
-footer article div.i {
+body footer article.foot-article div.foot div.foot-div i {
   color: #1259c3;
   font-size: 2em;
   display: flex;
@@ -209,14 +215,14 @@ footer article div.i {
   padding-top: 50px;
 }
 
-article .foot {
+body footer article.foot-article div.foot div.foot-div{
   box-sizing: border-box;
-  width: 97%;
+  width: 88%;
   margin: auto;
   padding-top: 30px;
   padding-left: 15px;
   padding-bottom: 15px;
-  background-color: #ebebeb;
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   color: #666
@@ -230,19 +236,7 @@ main.login {
   padding-top:15px;
 }
 
-.control-form{
-  margin-bottom: 15px;
-}
-
-form div{
-  padding-bottom:10px;
-}
-
-.user{
-  margin-bottom: 10px;
-}
-
-@media (min-width: 361px) { /* MINIMO DE CELULAR*/
+@media (min-width: 361px) { 
   main section article .description {
     display: block;
   }
@@ -277,7 +271,8 @@ form div{
 }
 
 
-@media (min-width: 481px){ /* MAXIMO CELULAR*/
+
+@media (min-width: 481px){ 
   body header nav {
     display: flex;
     justify-content: space-between;
@@ -301,6 +296,13 @@ form div{
   main section div.products article {
     width: 45%;
   }
+
+  div.top-header{
+
+  }
+  input.form{
+
+  }
 }
 
 
@@ -322,13 +324,10 @@ form div{
   main section article:hover .description {
     opacity: 1;
   }
-  /* End MD1-1 prueba de ingreso de esta parte de codigo*/
   main section div.products article {
     width: 22%;
     box-shadow: none;
   }
-
-  /* MD1-2 */
   main section div.products article {
     width: 22%;
     box-shadow: none;
@@ -338,19 +337,13 @@ form div{
   main section div.products article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-  /* End MD1-2 */
-  
-  /* MD1-3 */
   main section div.products article .fa-truck {
     transition: transform 300ms;
   }
   main section div.products article:hover .fa-truck {
     transform: rotate(-90deg);
   }
-  /* End MD1-3 */
-}
 
-/* MD2 */
 main.login form button {
   transition: color, background-color 300ms;
 }
@@ -359,4 +352,72 @@ main.login form button:hover {
   background-color: #0022AA;
   color: #ffffff;
 }
+}
 
+
+
+
+
+/* REGISTER.HTML */
+
+
+main.register form.form{
+  display:flex;
+  flex-direction:column;
+
+justify-content:center;
+
+}
+
+main.register form.form input.control-form,
+main.register form.form input.user{
+  margin:5px;
+  padding:8px;
+  border-radius:5px;
+  border:none;
+  
+}
+
+main.register form.form h4,
+main.register form.form h4.user,
+main.register form.form label{
+  margin:5px;
+  padding:8px;
+}
+
+main.register form.form div{
+  padding:5px;
+}
+
+form.form div.button input{
+  padding:10px;
+    margin:10px;
+    border-radius:5px;
+    border:none;
+    background-color:#0022AA;
+    color: #ffff;
+    width:40%;
+  }
+    
+
+
+/* LOGIN.HTML */
+main.login form {
+  display:flex;
+flex-direction:column;
+justify-content:center; 
+}
+
+main.login form input{
+margin:15px;
+padding:10px;
+border-radius:10px;
+border: none;
+}
+
+main.login form input.button-login{
+background-color:#0022AA;
+  color: #ffff;
+}
+
+  
