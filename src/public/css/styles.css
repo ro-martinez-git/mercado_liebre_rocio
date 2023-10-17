@@ -72,18 +72,18 @@ header div.form .input {
   padding: 2px;
 }
 
-input.form{
-  border-radius:5px;
+input.form {
+  border-radius: 5px;
   border: none;
-  outline:none;
+  outline: none;
   padding: 8px;
 }
 
-header div.top-header div.form span.submit i{
+header div.top-header div.form span.submit i {
   color: #666;
   border: none;
   cursor: pointer;
-  font-size:12px
+  font-size: 12px
 }
 
 header div.top-header p {
@@ -116,12 +116,13 @@ article div.main-article {
   align-items: baseline;
   border-top: 1px solid #ebebeb;
   position: relative;
-  padding: 15px;
+  padding-top: 20px;
 }
 
 .price {
   font-size: 18px;
   line-height: 26px;
+  padding-bottom: 15px;
 }
 
 .discount {
@@ -162,6 +163,7 @@ main section article i,
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  padding-left: 15px;
 }
 
 main section article i {
@@ -205,6 +207,10 @@ main section article i {
   padding-right: 40px;
 }
 
+body footer{
+  background-color: #ffff;
+}
+
 body footer article.foot-article div.foot div.foot-div i {
   color: #1259c3;
   font-size: 2em;
@@ -215,7 +221,7 @@ body footer article.foot-article div.foot div.foot-div i {
   padding-top: 50px;
 }
 
-body footer article.foot-article div.foot div.foot-div{
+body footer article.foot-article div.foot div.foot-div {
   box-sizing: border-box;
   width: 88%;
   margin: auto;
@@ -228,15 +234,24 @@ body footer article.foot-article div.foot div.foot-div{
   color: #666
 }
 
+body footer span {
+  display: block;
+  font-size: 14px;;
+  padding: 10px;
+  padding-top: 20px;
+  color: #666;
+}
+
+
 main.register,
 main.login {
   display: block;
   width: 100%;
   padding: 10px 10px;
-  padding-top:15px;
+  padding-top: 15px;
 }
 
-@media (min-width: 361px) { 
+@media (min-width: 361px) {
   main section article .description {
     display: block;
   }
@@ -262,52 +277,55 @@ main.login {
     width: 50%;
     position: relative
   }
+
   body header nav ul.nav-bar {
     display: none;
   }
+
   body header nav ul.login-navbar {
-  display: none;
+    display: none;
+  }
+
+  body footer span{
+    text-align:center;
   }
 }
 
 
 
-@media (min-width: 481px){ 
+@media (min-width: 481px) {
   body header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   body header nav ul.nav-bar {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom:15px;
+    padding-bottom: 15px;
   }
-  
+
   body header nav ul.login-navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom:15px;
+    padding-bottom: 15px;
   }
 
   main section div.products article {
     width: 45%;
-  }
-
-  div.top-header{
-
-  }
-  input.form{
-
   }
 }
 
 
 
 @media (min-width: 769px) {
+  body header nav {
+    margin: 0px 40px;
+    font-size: 16px;
+  }
   main section div.products article {
     width: 22%;
   }
@@ -315,43 +333,72 @@ main.login {
   body header div.burger-menu {
     display: none;
   }
-  
+
   main section article .description {
     position: relative;
     opacity: 0;
     transition: opacity 300ms;
   }
+
   main section article:hover .description {
     opacity: 1;
   }
+
   main section div.products article {
     width: 22%;
     box-shadow: none;
   }
+
   main section div.products article {
-    width: 22%;
+    width: 20%;
     box-shadow: none;
     transition: box-shadow 300ms;
     cursor: pointer;
   }
+
   main section div.products article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
+
   main section div.products article .fa-truck {
     transition: transform 300ms;
   }
+
   main section div.products article:hover .fa-truck {
     transform: rotate(-90deg);
   }
 
-main.login form button {
-  transition: color, background-color 300ms;
-}
+  main.login form button {
+    transition: color, background-color 300ms;
+  }
 
-main.login form button:hover {
-  background-color: #0022AA;
-  color: #ffffff;
-}
+  main.login form button:hover {
+    background-color: #0022AA;
+    color: #ffffff;
+  }
+
+  main.register {
+    width: 60%
+  }
+
+  main.login form {
+    width: 60%;
+  }
+
+  footer article.foot-article div.foot {
+    display: flex;
+  }
+
+  body footer article.foot-article div.foot div.foot-div {
+    width: 33%;
+    margin: 0px;
+    padding-bottom:50px;
+  }
+
+  body footer span{
+    text-align:end;
+  }
+
 }
 
 
@@ -361,63 +408,63 @@ main.login form button:hover {
 /* REGISTER.HTML */
 
 
-main.register form.form{
-  display:flex;
-  flex-direction:column;
-
-justify-content:center;
+main.register form.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
 main.register form.form input.control-form,
-main.register form.form input.user{
-  margin:5px;
-  padding:8px;
-  border-radius:5px;
-  border:none;
-  
+main.register form.form input.user {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
 }
 
 main.register form.form h4,
 main.register form.form h4.user,
-main.register form.form label{
-  margin:5px;
-  padding:8px;
+main.register form.form label {
+  margin: 5px;
+  padding: 8px;
 }
 
-main.register form.form div{
-  padding:5px;
+main.register form.form div {
+  padding: 5px;
 }
 
-form.form div.button input{
-  padding:10px;
-    margin:10px;
-    border-radius:5px;
-    border:none;
-    background-color:#0022AA;
-    color: #ffff;
-    width:40%;
-  }
-    
+form.form div.button input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0044aa;
+  color: #ffff;
+  width: 40%;
+}
 
 
 /* LOGIN.HTML */
 main.login form {
-  display:flex;
-flex-direction:column;
-justify-content:center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }
 
-main.login form input{
-margin:15px;
-padding:10px;
-border-radius:10px;
-border: none;
+main.login form input {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
-main.login form input.button-login{
-background-color:#0022AA;
+main.login form input.button-login {
+  background-color: #0044aa;
   color: #ffff;
 }
-
-  
