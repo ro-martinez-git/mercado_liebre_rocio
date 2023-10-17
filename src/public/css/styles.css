@@ -24,7 +24,7 @@ p {
 }
 
 div.top-header {
-  padding: 5%;
+  padding-top: 5%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -48,6 +48,7 @@ header div.form {
   justify-content: flex-end;
   padding: 2px;
   font-size: 11px;
+  width: 50%;
 }
 
 header nav {
@@ -76,20 +77,24 @@ input.form {
   border-radius: 5px;
   border: none;
   outline: none;
-  padding: 8px;
+  padding: 5px;
+  width: 100%;
+  margin-right: 3px;
 }
 
-header div.top-header div.form span.submit i {
+header div.top-header div.form button.submit i {
   color: #666;
   border: none;
   cursor: pointer;
-  font-size: 12px
+  font-size: 12px;
+  padding: 5px;
 }
 
 header div.top-header p {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
+  width: 80%;
+  justify-content:center;
+  text-align:center;
+  margin:auto;
 }
 
 div.burger-menu {
@@ -207,7 +212,7 @@ main section article i {
   padding-right: 40px;
 }
 
-body footer{
+body footer {
   background-color: #ffff;
 }
 
@@ -236,7 +241,8 @@ body footer article.foot-article div.foot div.foot-div {
 
 body footer span {
   display: block;
-  font-size: 14px;;
+  font-size: 14px;
+  ;
   padding: 10px;
   padding-top: 20px;
   color: #666;
@@ -249,6 +255,7 @@ main.login {
   width: 100%;
   padding: 10px 10px;
   padding-top: 15px;
+  padding-bottom: 20%;
 }
 
 @media (min-width: 361px) {
@@ -286,8 +293,8 @@ main.login {
     display: none;
   }
 
-  body footer span{
-    text-align:center;
+  body footer span {
+    text-align: center;
   }
 }
 
@@ -326,6 +333,7 @@ main.login {
     margin: 0px 40px;
     font-size: 16px;
   }
+
   main section div.products article {
     width: 22%;
   }
@@ -392,11 +400,21 @@ main.login {
   body footer article.foot-article div.foot div.foot-div {
     width: 33%;
     margin: 0px;
-    padding-bottom:50px;
+    padding-bottom: 50px;
   }
 
-  body footer span{
-    text-align:end;
+  body footer span {
+    text-align: end;
+  }
+
+  div.top-header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  header div.logo,
+  header.form {
+    width: 100%;
   }
 
 }
