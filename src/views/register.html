@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <title>Bienvenidxs a MercadoLiebre</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/b373cc5067.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
@@ -16,11 +20,11 @@
             <div class="logo">
                 <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
             </div>
-            <div class="form" action="#" method="GET">
-                <div class="input">Buscar productos, marcas y más</div>
-                <div class="submit"><i class="fa fa-search"></i></div>
+            <div class="form" action="#" method="POST">
+                <input type="text" name="form" placeholder="Buscar productos, marcas y más" class="form">
+                <button class="submit"><i class="fa fa-search"></i></button>
             </div>
-            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            <p><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
         <nav>
             <ul class="nav-bar">
@@ -30,7 +34,7 @@
                 <li><a href="#">Ayuda</a></li>
             </ul>
             <ul class="login-navbar">
-                <li><a href="src\views\register.html">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
                 <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
@@ -41,20 +45,28 @@
     </header>
     <main class="register">
         <form action="/" method="POST" class="form">
-            <input type="text" name="name" placeholder="Nombre y apellido" class="control-form">
-            <input type="text" name="user" placeholder="Nombre de usuario" class="control-form">
-            <input type="email" name="email" placeholder="E-mail" class="control-form">
+
+            <input type="text" name="name" placeholder="Nombre y apellido" class="control-form" 
+            required pattern="[A-Za-z]{2,}" title="Por favor, ingrese un nombre válido con al menos dos letras">
+
+            <input type="text" name="user" placeholder="Nombre de usuario" class="control-form"
+            required pattern="[A-Za-z]{2,}" title="Por favor, ingrese un nombre válido con al menos dos letras">
+
+            <input type="email" name="email" placeholder="E-mail" class="control-form" required>
             <br>
+
             <label for="birth_date"><b>Fecha de nacimiento</b></label>
             <br>
-            <input type="date" name="birth_date" id="birth_date" class="control-form">
+            <input type="date" name="birth_date" id="birth_date" class="control-form" max="2005-01-01" required>
             <br>
-            <input type="text" name="addres" placeholder="Domicilio" class="control-form">
+
+            <input type="text" name="addres" placeholder="Domicilio" class="control-form" required>
+
             <h4>Perfil del usuario</h4>
             <div class="profile">
-                <input type="radio" name="profile" value="buy" id="buy" >
+                <input type="radio" name="profile" value="buy" id="buy" required>
                 <label for="buy">Comprador</label>
-                <input type="radio" name="profile" value="sell" id="sell">
+                <input type="radio" name="profile" value="sell" id="sell" required>
                 <label for="sell">Vendedor</label>
             </div>
 
@@ -86,8 +98,11 @@
             <input type="file" name="avatar">
             <br>
             <br>
-            <input type="password" name="pass" placeholder="Elegí tu contraseña" class="user">
-            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" class="user">
+            <input type="password" name="pass" placeholder="Elegí tu contraseña" class="user" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="La contraseña debe contener al menos un número, una letra mayúscula y una letra minúscula, y al menos 8 caracteres.">
+            
+            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" class="user" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="La contraseña debe contener al menos un número, una letra mayúscula y una letra minúscula, y al menos 8 caracteres.">
             <br>
             <br>
             <div class="button">

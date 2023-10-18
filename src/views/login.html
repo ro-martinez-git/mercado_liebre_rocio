@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <title>Bienvenidxs a MercadoLiebre</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/b373cc5067.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -16,11 +20,11 @@
             <div class="logo">
                 <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
             </div>
-            <div class="form" action="#" method="GET">
-                <div class="input">Buscar productos, marcas y más</div>
-                <div class="submit"><i class="fa fa-search"></i></div>
+            <div class="form" action="#" method="POST">
+                <input type="text" name="form" placeholder="Buscar productos, marcas y más" class="form">
+                <button class="submit"><i class="fa fa-search"></i></button>
             </div>
-            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            <p><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
         <nav>
             <ul class="nav-bar">
@@ -41,8 +45,9 @@
     </header>
     <main class="login">
         <form action="/" method="POST">
-            <input type="text" name="user" placeholder="Nombre de usuario">
-            <input type="password" name="pass" placeholder="Elegí tu contraseña">
+            <input type="text" name="user" placeholder="Nombre de usuario" required pattern="[A-Za-z]{2,}" title="Por favor, ingrese un nombre válido con al menos dos letras">
+            <input type="password" name="pass" placeholder="Elegí tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="La contraseña debe contener al menos un número, una letra mayúscula y una letra minúscula, y al menos 8 caracteres.">
             <input class="button-login" type="submit" value="Enviar">
         </form>
     </main>

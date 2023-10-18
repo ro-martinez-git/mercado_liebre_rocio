@@ -1,0 +1,19 @@
+main.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+main.login form input {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+main.login form input.button-login {
+    background-color: #0044aa;
+    color: #ffff;
+}

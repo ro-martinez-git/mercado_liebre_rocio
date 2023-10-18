@@ -24,7 +24,7 @@ p {
 }
 
 div.top-header {
-  padding-top: 5%;
+  padding: 15px 10px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -253,9 +253,7 @@ main.register,
 main.login {
   display: block;
   width: 100%;
-  padding: 10px 10px;
-  padding-top: 15px;
-  padding-bottom: 20%;
+  padding: 10% 5%;
 }
 
 @media (min-width: 361px) {
@@ -417,72 +415,4 @@ main.login {
     width: 100%;
   }
 
-}
-
-
-
-
-
-/* REGISTER.HTML */
-
-
-main.register form.form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-main.register form.form input.control-form,
-main.register form.form input.user {
-  margin: 5px;
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-
-}
-
-main.register form.form h4,
-main.register form.form h4.user,
-main.register form.form label {
-  margin: 5px;
-  padding: 8px;
-}
-
-main.register form.form div {
-  padding: 5px;
-}
-
-form.form div.button input {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #0044aa;
-  color: #ffff;
-  width: 40%;
-}
-
-
-/* LOGIN.HTML */
-main.login form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-}
-
-main.login form input {
-  margin: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-}
-
-main.login form input.button-login {
-  background-color: #0044aa;
-  color: #ffff;
 }
