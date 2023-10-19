@@ -208,8 +208,7 @@ main section article i {
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 5px;
 }
 
 body footer {
@@ -230,9 +229,7 @@ body footer article.foot-article div.foot div.foot-div {
   box-sizing: border-box;
   width: 88%;
   margin: auto;
-  padding-top: 30px;
-  padding-left: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;;
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -242,19 +239,11 @@ body footer article.foot-article div.foot div.foot-div {
 body footer span {
   display: block;
   font-size: 14px;
-  ;
   padding: 10px;
-  padding-top: 20px;
+  padding-top: 30px;
   color: #666;
 }
 
-
-main.register,
-main.login {
-  display: block;
-  width: 100%;
-  padding: 10% 5%;
-}
 
 @media (min-width: 361px) {
   main section article .description {
@@ -374,23 +363,6 @@ main.login {
     transform: rotate(-90deg);
   }
 
-  main.login form button {
-    transition: color, background-color 300ms;
-  }
-
-  main.login form button:hover {
-    background-color: #0022AA;
-    color: #ffffff;
-  }
-
-  main.register {
-    width: 60%
-  }
-
-  main.login form {
-    width: 60%;
-  }
-
   footer article.foot-article div.foot {
     display: flex;
   }
@@ -398,11 +370,11 @@ main.login {
   body footer article.foot-article div.foot div.foot-div {
     width: 33%;
     margin: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
   }
 
   body footer span {
-    text-align: end;
+    text-align: start;
   }
 
   div.top-header {
